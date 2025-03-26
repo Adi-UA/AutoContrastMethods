@@ -78,7 +78,9 @@ class AutoContraster:
 
     def apply_pillow_autocontrast(self, img):
         # Refer: https://pillow.readthedocs.io/en/stable/reference/ImageOps.html#PIL.ImageOps.autocontrast
-        return autocontrast(img)
+        return autocontrast(
+            img, cutoff=45
+        )  # the answer for why 45 is in the manual implementation section
 
     def apply_torch_adjustcontrast(self, img):
         # Refer: https://pytorch.org/vision/main/generated/torchvision.transforms.functional.adjust_contrast.html

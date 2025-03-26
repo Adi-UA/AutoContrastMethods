@@ -41,3 +41,4 @@ The script generates and saves a comparison of the different methods.
 - The manual method assumes the brightest pixels represent cells.
 - The lowest 45% of pixel intensities are clamped to zero to enhance contrast.
 - This ensures that the cells remain visible while the background is suppressed.
+- Empirically, it seems like this method works as well as PIL, but has the added benefit of not flattening the gradients that could be extracted from inside the cell borders.
